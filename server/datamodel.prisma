@@ -1,0 +1,6 @@
+type SwitchEvent {
+  id: ID! @unique
+  time: DateTime!
+  switchState: Boolean!
+
+}
