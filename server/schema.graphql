@@ -1,8 +1,5 @@
 type Query {
-  switchState: [SwitchEvent]
-  publishedPosts: [Post!]!
-  post(postId: ID!): Post
-  postsByUser(userId: ID!): [Post!]!
+  getSwitchState: [SwitchEvent]
   getLastSwitch: [SwitchEvent]
 }
 
@@ -11,7 +8,7 @@ type Mutation {
 }
 
 type SwitchEvent {
-  id: ID! @unique
-  time: DateTime!
+  id: ID!
+  time: String!
   switchState: Boolean!
 }
